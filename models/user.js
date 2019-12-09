@@ -30,14 +30,63 @@ const userSchema = new Schema({
     organization: {
         type: String,
         trim: true,
-        maxlength: 32,
+        maxlength: 42,
+        contact: {
+            phoneNumber: {
+                type: String,
+                trim: true
+            },
+            address: {
+                line1: {
+                    type: String,
+                    trim: true
+                },
+                line2: {
+                    type: String,
+                    trim: true
+                },
+                line3: {
+                    type: String,
+                    trim: true
+                },
+                city: {
+                    type: String,
+                    trim: true
+                },
+                state: {
+                    type: String,
+                    trim: true
+                },
+                zipCode: {
+                    type: Number,
+                    trim: true,
+                    length: 5
+                },
+            }
+        }
     },
     email: {
         type: String,
         trim: true,
         match: /^(.*)@(.*)\.(.*)+(?<![_.])$/
-    }
-
+    },
+    phoneNumber: {
+        type: String,
+        trim: true
+    },
+    paymentMethods: [{
+        cardType: String,
+        name: {
+            type: String,
+            trim: true
+        },
+        cardNumber: {
+            type: String,
+            length: 20
+        },
+        expiration: String,
+        CCV: String
+    }]
 });
 
 schema.pre('save', async function save(next) {
