@@ -1,0 +1,59 @@
+nav {
+    background-color: rgb(44, 44, 44);
+    background-image: linear-gradient(rgb(15, 15, 15), rgb(45, 45, 45), rgb(30, 30, 30));
+    margin-bottom: 2.5vh;
+}
+.sidenav {
+    background-color: rgb(44, 44, 44);
+    background-image: linear-gradient(rgb(30, 30, 30), rgb(40, 40, 40), rgb(45, 45, 45), rgb(40, 40, 40), rgb(50, 50, 50), rgb(30, 30, 30),rgb(15, 15, 15));
+}
+
+.brand-logo{
+    /* padding: 2em; */
+    margin-left: 1em; 
+}
+
+ul.right {
+    margin-right: 1em;
+    padding: .2em
+}
+
+#mobile-demo {
+    background-color: rgb(44, 44, 44);
+    /* text-decoration: white */
+}
+.sidenav li>a {
+    color: #ffffff;
+}
+ul.right>li>a {
+    font-weight: 700;
+}
+.sidenav li>a:hover, ul.right>li>a:hover {
+    color: black;
+    text-shadow:0px 0px 15px rgb(224, 224, 224);
+    background-color: inherit;
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+.sidenav li>a:hover {
+    background-color: rgb(50, 50, 50);
+    background-image: linear-gradient(rgb(32, 32, 32), rgb(40, 40, 40), rgb(48, 48, 48), rgb(40, 40, 40) rgb(32, 32, 32));
+}
+  
+  a.brand-logo:hover {
+    cursor: pointer;
+    color: black;
+    text-shadow:0px 0px 15px rgb(224, 224, 224);
+  }
+  
+/* Media Query is used to adjust Spacing and Font Size on small screens to prevent overflow */
+
+@media only screen and (max-width: 484px) {
+    .brand-logo{
+        margin-left: 0;
+    }
+    nav .brand-logo {
+        font-size: 1.7rem;
+    }
+  }
